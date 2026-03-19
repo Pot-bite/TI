@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>LFSR Шифрование и Дешифрование</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>1. Исходные данные</h2>
+      <textarea
+        id="textInput"
+        rows="3"
+        placeholder="Введите текст..."></textarea>
+      <input type="file" id="fileInput" />
+      <div id="output" class="output-box">
+        Здесь появятся биты исходных данных...
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>2. Ключ и Управление</h2>
+      <input
+        type="text"
+        id="keyInput"
+        placeholder="Введите 38 бит (состоит только из 0 и 1)"
+        maxlength="38" />
+      <div id="registerError" class="error"></div>
+
+      <button id="generateKeyButton">Зашифровать / Расшифровать (XOR)</button>
+      <button id="downloadButton">Скачать результат</button>
+
+      <h3>Сгенерированный ключ (LFSR):</h3>
+      <div id="lfsrKeyOutput" class="output-box">
+        Здесь появятся биты сгенерированного ключа...
+      </div>
+
+      <h3>Результат (Зашифрованный / Расшифрованный файл):</h3>
+      <div id="key" class="output-box">Здесь появятся биты результата...</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
